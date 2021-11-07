@@ -101,11 +101,4 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-
-
-
-COPY Docker/ /app/Docker
-COPY JDC/ /app/JDC
-COPY .git/ /app/.git
-
-ENTRYPOINT ["dotnet", "/app/Docker/QQBot.Docker.dll"]
+ENTRYPOINT ["dotnet", "QQBot.JDC.dll"]
