@@ -96,6 +96,7 @@ RUN mkdir /opencvsharp/make && cd /opencvsharp/make && \
     cp /opencvsharp/make/OpenCvSharpExtern/libOpenCvSharpExtern.so /usr/lib/
 
 ENV ASPNETCORE_URLS=http://+:5020
+COPY . /app
 WORKDIR /app
 EXPOSE 5020
 
