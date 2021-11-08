@@ -1,1 +1,2 @@
-cd /app/JDC && chmod 777 QQBot.JDC && nohup ./QQBot.JDC &
+## 11µã31·Ö
+cd /app/linux-x64 && chmod 777 QQBot.Web && nohup ./QQBot.Web &
