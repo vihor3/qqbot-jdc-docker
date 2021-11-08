@@ -95,17 +95,8 @@ RUN mkdir /opencvsharp/make && cd /opencvsharp/make && \
     rm -rf /opencv_contrib && \
     cp /opencvsharp/make/OpenCvSharpExtern/libOpenCvSharpExtern.so /usr/lib/
 
-ENV ASPNETCORE_URLS=http://+:80
-COPY . /app
+ENV ASPNETCORE_URLS=http://+:5020
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
+EXPOSE 5020
 
-
-
-
-COPY Docker/ /app/Docker
-COPY JDC/ /app/JDC
-COPY .git/ /app/.git
-
-ENTRYPOINT ["dotnet", "/app/Docker/QQBot.Docker.dll"]
+ENTRYPOINT ["dotnet", "QQBot.JDC.dll"]
